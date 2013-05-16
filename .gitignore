@@ -1,2 +1,9 @@
-/lobber/nbproject/private/
 /nbproject/private/
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+/build/
+/dist/
