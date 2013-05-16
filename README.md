@@ -1,7 +1,7 @@
 lobber
 ======
 
-![ScreenShot](screenshot.jpg)
+![ScreenShot](https://raw.github.com/skaviouz/lobber/master/bin/Example.png)
 
 This program takes azimuth inputs and outputs graphical representations.
 
