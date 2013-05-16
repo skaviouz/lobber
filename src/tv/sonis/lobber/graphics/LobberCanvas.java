@@ -16,6 +16,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import javax.imageio.ImageIO;
+import javax.swing.JFrame;
 import tv.sonis.*;
 import tv.sonis.lobber.*;
 import tv.sonis.lobber.model.AzimuthData;
@@ -66,12 +67,12 @@ public class LobberCanvas extends Canvas {
         }
         repaint();
     }
-    public LobberToolApplication LTA = null;
+    public JFrame LTA = null;
 
     public LobberCanvas() {
     }
 
-    public LobberCanvas(LobberToolApplication lta) {
+    public LobberCanvas(JFrame lta) {
         LTA = lta;
         resized();
         this.setBackground(new Color(255, 255, 255));

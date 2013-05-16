@@ -83,16 +83,37 @@ public class AboutDialogBox extends javax.swing.JDialog {
             append(Color.black, "\n");
 
         }};
-        jPanel2 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextPane2 = new ColorJTextPane(){{
+            append(Color.black, "\n");
+            append(Color.black, "\nv 5.0   -   Code:       Added improvements, mostly gui fixes, using github for revision control");
+            append(Color.black, "\nv 4.2.5-b67 Code:       Testing gui improvements, added helpers");
+            append(Color.black, "\nv 4.2   -   Code:       Noted out algebra, less boilerplate (85% less)");
+            append(Color.blue, "\n                NOTE: trigonometry uses 5 lines vs. algebra version used 40+");
+            append(Color.blue, "\n                NOTE: algebra left for historic data");
+            append(Color.green, "\n                TODO: will remove in couple git updates");
+            append(Color.black, "\nv 4.1   -   VERSION:    version update, adjustments");
+            append(Color.blue, "\n                NOTE: Version info was wrong, small gui adjustments");
+            append(Color.black, "\nv 4.0   -   Code:       less boilerplate, took out proprietary graphics library");
+            append(Color.blue, "\n                NOTE: Took out geosoft.no graphics library");
+            append(Color.black, "\nv 3.5   -   GUI:       bug fixes");
+            append(Color.blue, "\n                NOTE: broken keybindings, autosize adjustments removed for now");
+            append(Color.black, "\nv 3.0   -   GUI:        included adjustable settings");
+            append(Color.blue, "\n                NOTE: request for adjustable settings");
+            append(Color.black, "\nv 2.0   -   ADD:        included other features like wifi calculator");
+            append(Color.blue, "\n                NOTE: programmed other features I thought would be useful");
+            append(Color.black, "\nv 1.5   -   Code:       fixed algorithm bug");
+            append(Color.blue, "\n                NOTE: 135-225° was reversed like 225-135° (flipped)");
+            append(Color.black, "\nv 1.0   -   Code:       basic instructions written");
+            append(Color.blue, "\n                NOTE:   algebra, geosoft.no/graphics/, swing");
+            append(Color.black, "\n");
+            append(Color.black, "\n");
+            append(Color.black, "\n");
+            append(Color.black, "\n");
+            append(Color.black, "\n");
+
+        }};
         jPanel4 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         values = new javax.swing.JTextArea();
@@ -152,7 +173,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
 
         jLabel2.setText("Version");
 
-        jLabel3.setText("v4.2.4-b36");
+        jLabel3.setText("v5.0");
 
         jLabel4.setText("Programmer");
 
@@ -194,7 +215,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
                             .addComponent(jLabel4)
                             .addComponent(jLabel6)
                             .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel7)
                             .addComponent(jLabel5)
@@ -265,76 +286,29 @@ public class AboutDialogBox extends javax.swing.JDialog {
 
         jTabbedPane1.addTab("How", jPanel3);
 
-        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTextPane2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                formMouseClicked(evt);
+                jTextPane2formMouseClicked(evt);
             }
         });
+        jScrollPane4.setViewportView(jTextPane2);
 
-        jLabel11.setText("V1 - Basics");
-
-        jLabel12.setText("V1.5 - fixed algorythm bug, 135-225° wa reversed 225-135° (flipped)");
-
-        jLabel13.setText("V2 - included other tools such as azmuth wifi/signal calculator");
-
-        jLabel14.setText("V3 - included adjustable settings");
-
-        jLabel15.setText("V3.5 - bug fixes such as broken shortcuts and");
-
-        jLabel16.setText("auto size fixing");
-
-        jLabel17.setText("V4.1 - new code, less boilerplate, no 3rd party libraries");
-
-        jLabel18.setText("Swing, AWT, Graphics2D");
-
-        jLabel19.setText("V4.2 - Algorythm, using trigonometry instead of algebra (less boilerplate)");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap())
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 528, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel11)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel12)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel13)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel14)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel16)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel18)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel19)
-                .addContainerGap(108, Short.MAX_VALUE))
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 430, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("History", jPanel2);
+        jTabbedPane1.addTab("Version", jPanel7);
 
         values.setColumns(20);
         values.setRows(5);
@@ -734,6 +708,10 @@ public class AboutDialogBox extends javax.swing.JDialog {
         LTA.canvas2.repaint();
     }//GEN-LAST:event_jSlider7StateChanged
 
+    private void jTextPane2formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextPane2formMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextPane2formMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton1Add;
@@ -742,15 +720,6 @@ public class AboutDialogBox extends javax.swing.JDialog {
     private javax.swing.JComboBox jComboBox1LineColor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -771,14 +740,15 @@ public class AboutDialogBox extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JSlider jSlider2;
     private javax.swing.JSlider jSlider3;
@@ -792,6 +762,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
     private javax.swing.JTextField jTextField3ArcThickness;
     private javax.swing.JTextField jTextFieldAzimuth;
     private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextPane jTextPane2;
     private javax.swing.JTextArea values;
     // End of variables declaration//GEN-END:variables
 

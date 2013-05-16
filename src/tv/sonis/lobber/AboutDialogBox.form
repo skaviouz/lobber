@@ -82,7 +82,7 @@
                                   <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="159" max="32767" attributes="0"/>
+                              <EmptySpace pref="210" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
@@ -153,7 +153,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
-                <Property name="text" type="java.lang.String" value="v4.2.4-b36"/>
+                <Property name="text" type="java.lang.String" value="v5.0"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
@@ -265,14 +265,11 @@
             </Container>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanel2">
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="formMouseClicked"/>
-          </Events>
+        <Container class="javax.swing.JPanel" name="jPanel7">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="History">
-                <Property name="tabTitle" type="java.lang.String" value="History"/>
+              <JTabbedPaneConstraints tabName="Version">
+                <Property name="tabTitle" type="java.lang.String" value="Version"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -280,100 +277,39 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel17" max="32767" attributes="0"/>
-                          <Component id="jLabel13" max="32767" attributes="0"/>
-                          <Component id="jLabel12" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel11" max="32767" attributes="0"/>
-                          <Component id="jLabel14" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel16" max="32767" attributes="0"/>
-                                  <Component id="jLabel18" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="jLabel19" alignment="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="528" max="32767" attributes="0"/>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane4" alignment="0" pref="528" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="108" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane4" alignment="0" pref="430" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel11">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="V1 - Basics"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel12">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="V1.5 - fixed algorythm bug, 135-225&#xb0; wa reversed 225-135&#xb0; (flipped)"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel13">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="V2 - included other tools such as azmuth wifi/signal calculator"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel14">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="V3 - included adjustable settings"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel15">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="V3.5 - bug fixes such as broken shortcuts and"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel16">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="auto size fixing"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel17">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="V4.1 - new code, less boilerplate, no 3rd party libraries"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel18">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Swing, AWT, Graphics2D"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel19">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="V4.2 - Algorythm, using trigonometry instead of algebra (less boilerplate)"/>
-              </Properties>
-            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextPane" name="jTextPane2">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTextPane2formMouseClicked"/>
+                  </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new ColorJTextPane(){{&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\nv 5.0   -   Code:       Added improvements, mostly gui fixes, using github for revision control&quot;);&#xa;    append(Color.black, &quot;\nv 4.2.5-b67 Code:       Testing gui improvements, added helpers&quot;);&#xa;    append(Color.black, &quot;\nv 4.2   -   Code:       Noted out algebra, less boilerplate (85% less)&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: trigonometry uses 5 lines vs. algebra version used 40+&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: algebra left for historic data&quot;);&#xa;    append(Color.green, &quot;\n                TODO: will remove in couple git updates&quot;);&#xa;    append(Color.black, &quot;\nv 4.1   -   VERSION:    version update, adjustments&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: Version info was wrong, small gui adjustments&quot;);&#xa;    append(Color.black, &quot;\nv 4.0   -   Code:       less boilerplate, took out proprietary graphics library&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: Took out geosoft.no graphics library&quot;);&#xa;    append(Color.black, &quot;\nv 3.5   -   GUI:       bug fixes&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: broken keybindings, autosize adjustments removed for now&quot;);&#xa;    append(Color.black, &quot;\nv 3.0   -   GUI:        included adjustable settings&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: request for adjustable settings&quot;);&#xa;    append(Color.black, &quot;\nv 2.0   -   ADD:        included other features like wifi calculator&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: programmed other features I thought would be useful&quot;);&#xa;    append(Color.black, &quot;\nv 1.5   -   Code:       fixed algorithm bug&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: 135-225&#xb0; was reversed like 225-135&#xb0; (flipped)&quot;);&#xa;    append(Color.black, &quot;\nv 1.0   -   Code:       basic instructions written&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE:   algebra, geosoft.no/graphics/, swing&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;&#xa;}}"/>
+                  </AuxValues>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel4">
