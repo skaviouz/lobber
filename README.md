@@ -29,6 +29,8 @@ https://codeload.github.com/skaviouz/lobber/zip/master
 goto ./lobber/dist/run.bat
 
 or from cli : (input your path, not c:/aProject)
+
 cd c:/aProject/lobber/dist/run.bat
+
 java -Dsun.java2d.noddraw=true -jar lobber.jar tv.sonis.lobber.LobberToolApplication
 
