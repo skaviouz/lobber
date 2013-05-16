@@ -254,11 +254,16 @@
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
                 <Component class="javax.swing.JTextPane" name="jTextPane1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Courier New" size="16" style="0"/>
+                    </Property>
+                  </Properties>
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="formMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new ColorJTextPane(){{&#xa;    append(Color.black, &quot;\nRight click to hide/unhide this dialogue box!&quot;);&#xa;    append(Color.red,   &quot;\nPlease Read this tutorial carefully!&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\nAbout: Programmer notes&quot;);&#xa;    append(Color.black, &quot;\nHow: This Guide&quot;);&#xa;    append(Color.black, &quot;\nHistory: brief program history&quot;);&#xa;    append(Color.black, &quot;\nValues: This is where you input the values of azimuths.&quot;);&#xa;    append(Color.black, &quot;\n   you can use the built in add&apos;r to learn the format.&quot;);&#xa;    append(Color.black, &quot;\n   you can also copy and paste &apos;human&apos; code.&quot;);&#xa;    append(Color.black, &quot;\nRef: used to make reference azimuths.&quot;);&#xa;    append(Color.black, &quot;\nOPI: Options.&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;&#xa;}}"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new ColorJTextPane(){{&#xa;    append(Color.black, &quot;\nRight click to hide/unhide this dialogue box!&quot;);&#xa;    append(Color.red,   &quot;\nPlease Read this tutorial carefully!&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\nThe format for values:&quot;);&#xa;    append(Color.black, &quot;\neach plot gets a newline&quot;);&#xa;    append(Color.black, &quot;\nExamples of good / bad : &quot;);&#xa;    append(Color.blue, &quot;\nAzimuth//RED,GREEN,BLUE,ALPHA//THICKNESS//NOTE&quot;);&#xa;    append(Color.blue, &quot;\nAzimuth can be whole or decimal.&quot;);&#xa;    append(Color.blue, &quot;\n    \&quot;1.\&quot; translates to \&quot;1.0\&quot;&quot;);&#xa;    append(Color.blue, &quot;\n    Azimuth modulus (%) 360&quot;);&#xa;    append(Color.blue, &quot;\nSeperator always is //&quot;);&#xa;    append(Color.blue, &quot;\n    skipping values use default ones&quot;);&#xa;    append(Color.blue, &quot;\nRED,GREEN,BLUE,ALPHA rep by 0-255 each value&quot;);&#xa;    append(Color.blue, &quot;\n    you can leave numbers out&quot;);&#xa;    append(Color.blue, &quot;\nThickness&quot;);&#xa;    append(Color.blue, &quot;\n    in degrees, min. is 0.1&#xb0; default is 1&#xb0;&quot;);&#xa;    append(Color.blue, &quot;\n&quot;);&#xa;    append(Color.blue, &quot;\nExamples: &quot;);&#xa;    append(Color.green, &quot;(GREEN IS GOOD)&quot;);&#xa;    append(Color.red, &quot;(RED IS BAD)&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.green, &quot;\n222//255//22//NOTE          &quot;);&#xa;    append(Color.black, &quot;\n     &quot;);&#xa;    append(Color.black, &quot;&gt; 222.0//255,0,0,40//22.0//NOTE&quot;);&#xa;    append(Color.green, &quot;\n222                         &quot;);&#xa;    append(Color.black, &quot;\n     &quot;);&#xa;    append(Color.black, &quot;&gt; 222.0//0,0,0,40//1.0&quot;);&#xa;    append(Color.green, &quot;\n222.0////0.1                &quot;);&#xa;    append(Color.black, &quot;\n     &quot;);&#xa;    append(Color.black, &quot;&gt; 222.0//0,0,0,40//0.1&quot;);&#xa;    append(Color.green, &quot;\n222.0//,,255,30//2          &quot;);&#xa;    append(Color.black, &quot;\n     &quot;);&#xa;    append(Color.black, &quot;&gt; 222.0//0,0,255,30//2.0&quot;);&#xa;    append(Color.green, &quot;\n222.0//,255//3.             &quot;);&#xa;    append(Color.black, &quot;\n     &quot;);&#xa;    append(Color.black, &quot;&gt; 222.0//0,255,0,40//3.0&quot;);&#xa;    append(Color.red, &quot;\n222.0,//255,0,0,80,//22.0,//2&quot;);&#xa;    append(Color.black, &quot;\n     &quot;);&#xa;    append(Color.black, &quot;&gt; tokenizer doesn&apos;t check azi/thickness&quot;);&#xa;    append(Color.black, &quot;\n     &quot;);&#xa;    append(Color.black, &quot;&gt; Ignore line if uncorrectable error found!&quot;);&#xa;&#xa;}}"/>
                   </AuxValues>
                 </Component>
               </SubComponents>
@@ -332,8 +337,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="56" max="32767" attributes="0"/>
-                      <Component id="jScrollPane3" min="-2" pref="272" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane3" min="-2" pref="319" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -473,7 +478,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField2Alpha">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="20"/>
+                    <Property name="text" type="java.lang.String" value="40"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2AlphaActionPerformed"/>

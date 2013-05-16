@@ -4,18 +4,21 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.GraphicsDevice;
 import java.awt.*;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import tv.sonis.lobber.graphics.LobberCanvas;
 
 /**
  * Simple Application (JFrame)
+ *
  * @author skaviouz
  */
 public class LobberToolApplication extends javax.swing.JFrame {
 
     public LobberToolApplication() {
-        initComponents();
+            initComponents();
     }
 
     @SuppressWarnings("unchecked")

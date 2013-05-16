@@ -67,20 +67,44 @@ public class AboutDialogBox extends javax.swing.JDialog {
             append(Color.black, "\nRight click to hide/unhide this dialogue box!");
             append(Color.red,   "\nPlease Read this tutorial carefully!");
             append(Color.black, "\n");
-            append(Color.black, "\nAbout: Programmer notes");
-            append(Color.black, "\nHow: This Guide");
-            append(Color.black, "\nHistory: brief program history");
-            append(Color.black, "\nValues: This is where you input the values of azimuths.");
-            append(Color.black, "\n   you can use the built in add'r to learn the format.");
-            append(Color.black, "\n   you can also copy and paste 'human' code.");
-            append(Color.black, "\nRef: used to make reference azimuths.");
-            append(Color.black, "\nOPI: Options.");
+            append(Color.black, "\nThe format for values:");
+            append(Color.black, "\neach plot gets a newline");
+            append(Color.black, "\nExamples of good / bad : ");
+            append(Color.blue, "\nAzimuth//RED,GREEN,BLUE,ALPHA//THICKNESS//NOTE");
+            append(Color.blue, "\nAzimuth can be whole or decimal.");
+            append(Color.blue, "\n    \"1.\" translates to \"1.0\"");
+            append(Color.blue, "\n    Azimuth modulus (%) 360");
+            append(Color.blue, "\nSeperator always is //");
+            append(Color.blue, "\n    skipping values use default ones");
+            append(Color.blue, "\nRED,GREEN,BLUE,ALPHA rep by 0-255 each value");
+            append(Color.blue, "\n    you can leave numbers out");
+            append(Color.blue, "\nThickness");
+            append(Color.blue, "\n    in degrees, min. is 0.1° default is 1°");
+            append(Color.blue, "\n");
+            append(Color.blue, "\nExamples: ");
+            append(Color.green, "(GREEN IS GOOD)");
+            append(Color.red, "(RED IS BAD)");
             append(Color.black, "\n");
-            append(Color.black, "\n");
-            append(Color.black, "\n");
-            append(Color.black, "\n");
-            append(Color.black, "\n");
-            append(Color.black, "\n");
+            append(Color.green, "\n222//255//22//NOTE          ");
+            append(Color.black, "\n     ");
+            append(Color.black, "> 222.0//255,0,0,40//22.0//NOTE");
+            append(Color.green, "\n222                         ");
+            append(Color.black, "\n     ");
+            append(Color.black, "> 222.0//0,0,0,40//1.0");
+            append(Color.green, "\n222.0////0.1                ");
+            append(Color.black, "\n     ");
+            append(Color.black, "> 222.0//0,0,0,40//0.1");
+            append(Color.green, "\n222.0//,,255,30//2          ");
+            append(Color.black, "\n     ");
+            append(Color.black, "> 222.0//0,0,255,30//2.0");
+            append(Color.green, "\n222.0//,255//3.             ");
+            append(Color.black, "\n     ");
+            append(Color.black, "> 222.0//0,255,0,40//3.0");
+            append(Color.red, "\n222.0,//255,0,0,80,//22.0,//2");
+            append(Color.black, "\n     ");
+            append(Color.black, "> tokenizer doesn't check azi/thickness");
+            append(Color.black, "\n     ");
+            append(Color.black, "> Ignore line if uncorrectable error found!");
 
         }};
         jPanel7 = new javax.swing.JPanel();
@@ -262,6 +286,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
 
         jTabbedPane1.addTab("About", jPanel1);
 
+        jTextPane1.setFont(new java.awt.Font("Courier New", 0, 16)); // NOI18N
         jTextPane1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 formMouseClicked(evt);
@@ -343,7 +368,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
 
         jLabel24.setText("LabelID");
 
-        jTextField2Alpha.setText("20");
+        jTextField2Alpha.setText("40");
         jTextField2Alpha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2AlphaActionPerformed(evt);
@@ -437,8 +462,8 @@ public class AboutDialogBox extends javax.swing.JDialog {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jTabbedPane1.addTab("Values", jPanel4);
@@ -595,13 +620,6 @@ public class AboutDialogBox extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_formMouseClicked
 
-    private void valuesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_valuesMouseClicked
-        if (evt.getButton() == 3) {
-            this.setVisible(false);
-            valuesKeyPressed(null);
-        }
-    }//GEN-LAST:event_valuesMouseClicked
-
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
         LobberCanvas.bar[0] = jSlider1.getValue() / 10.00;
         LTA.canvas2.repaint();
@@ -616,62 +634,12 @@ public class AboutDialogBox extends javax.swing.JDialog {
         LobberCanvas.bar[2] = jSlider3.getValue() / 10.00;
         LTA.canvas2.repaint();
     }//GEN-LAST:event_jSlider3StateChanged
-
-    private void valuesKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_valuesKeyPressed
-        ((LobberCanvas) LTA.canvas2).setValids(values.getText().split("\n"));
-    }//GEN-LAST:event_valuesKeyPressed
-
-    private void jTextField3ArcThicknessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ArcThicknessActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ArcThicknessActionPerformed
-
-    private void jButton1AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1AddActionPerformed
-        jTextFieldAzimuthActionPerformed(null);
-    }//GEN-LAST:event_jButton1AddActionPerformed
     public int up = 0;
 
     public int up() {
         up++;
         return up;
     }
-    private void jTextFieldAzimuthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAzimuthActionPerformed
-        try {
-            //check values
-            double azi = Double.parseDouble(jTextFieldAzimuth.getText());
-            int color = jComboBox1LineColor.getSelectedIndex();//0=yellow, 1=red
-            int alpha = Integer.parseInt(jTextField2Alpha.getText());
-            boolean label = jCheckBox1LabelTheID.isSelected();
-            double arc = Double.parseDouble(jTextField3ArcThickness.getText());
-            //values good
-
-            //check ___
-            String colors = (color == 0) ? "255,255,0" : (color == 1) ? "255,0,0" : (color == 2) ? "" : (color == 3) ? "" : (color == 4) ? "" : (color == 5) ? "" : "";
-            if (alpha != -1 && alpha != 0 && alpha < 255) {
-                colors = colors + "," + alpha;
-            }
-            String labels = "";
-            if (label) {
-                labels = "//" + up();
-            }
-            values.append(azi + "//" + colors + "//" + arc + labels + "\n");
-            /*
-             * EXAMPLE: * 255//255,255,0,25//240 25//255,255,0,25//45
-             * 180//255,0,0,25//33 145//0,0,255,25//22 //___ are/is good
-             *
-             *
-             */
-
-            //values are good, added to values box, reset easy field...
-            jTextFieldAzimuth.setText("");
-            valuesKeyPressed(null);
-        } catch (Exception e) {
-        }
-    }//GEN-LAST:event_jTextFieldAzimuthActionPerformed
-
-    private void jTextField2AlphaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2AlphaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2AlphaActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         try {
@@ -711,6 +679,63 @@ public class AboutDialogBox extends javax.swing.JDialog {
     private void jTextPane2formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextPane2formMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextPane2formMouseClicked
+
+    private void jButton1AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1AddActionPerformed
+        jTextFieldAzimuthActionPerformed(null);
+    }//GEN-LAST:event_jButton1AddActionPerformed
+
+    private void jTextField3ArcThicknessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ArcThicknessActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ArcThicknessActionPerformed
+
+    private void jTextField2AlphaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2AlphaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2AlphaActionPerformed
+
+    private void jTextFieldAzimuthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAzimuthActionPerformed
+        try {
+            //check values
+            double azi = Double.parseDouble(jTextFieldAzimuth.getText());
+            int color = jComboBox1LineColor.getSelectedIndex();//0=yellow, 1=red
+            int alpha = Integer.parseInt(jTextField2Alpha.getText());
+            boolean label = jCheckBox1LabelTheID.isSelected();
+            double arc = Double.parseDouble(jTextField3ArcThickness.getText());
+            //values good
+
+            //check ___
+            String colors = (color == 0) ? "255,255,0" : (color == 1) ? "255,0,0" : (color == 2) ? "" : (color == 3) ? "" : (color == 4) ? "" : (color == 5) ? "" : "";
+            if (alpha != -1 && alpha != 0 && alpha < 255) {
+                colors = colors + "," + alpha;
+            }
+            String labels = "";
+            if (label) {
+                labels = "//" + up();
+            }
+            values.append(azi + "//" + colors + "//" + arc + labels + "\n");
+            /*
+            * EXAMPLE: * 255//255,255,0,25//240 25//255,255,0,25//45
+            * 180//255,0,0,25//33 145//0,0,255,25//22 //___ are/is good
+            *
+            *
+            */
+
+            //values are good, added to values box, reset easy field...
+            jTextFieldAzimuth.setText("");
+            valuesKeyPressed(null);
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jTextFieldAzimuthActionPerformed
+
+    private void valuesKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_valuesKeyPressed
+        ((LobberCanvas) LTA.canvas2).setValids(values.getText().split("\n"));
+    }//GEN-LAST:event_valuesKeyPressed
+
+    private void valuesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_valuesMouseClicked
+        if (evt.getButton() == 3) {
+            this.setVisible(false);
+            valuesKeyPressed(null);
+        }
+    }//GEN-LAST:event_valuesMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
