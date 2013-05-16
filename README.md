@@ -1,6 +1,8 @@
 lobber
 ======
 
+![ScreenShot](screenshot.jpg)
+
 This program takes azimuth inputs and outputs graphical representations.
 
 Programmer :
