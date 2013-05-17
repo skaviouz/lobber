@@ -20,17 +20,15 @@ This framework uses:
  * lombok 0.11.8
  * jspf 1.0.2
 
-To run the application via pre-build example,
+To run the application via pre-build example : 
+ * https://codeload.github.com/skaviouz/lobber/zip/master (zip)
+ * https://github.com/skaviouz/lobber.git (git)
 
-https://github.com/skaviouz/lobber.git
-or
-https://codeload.github.com/skaviouz/lobber/zip/master
+How to run: (multiple choice)
+ * open the zip and find ./lobber/dist/run.bat
+ * in windows7 run 'cmd' (control prompt)
+ - - type 'cd c:/aProject/lobber/dist/run.bat' given if you extract zip to 'c:/aProject/lobber'
+ - - type 'java -Dsun.java2d.noddraw=true -jar lobber.jar tv.sonis.lobber.LobberToolApplication
 
-goto ./lobber/dist/run.bat
-
-or from cli : (input your path, not c:/aProject)
-
-cd c:/aProject/lobber/dist/run.bat
-
-java -Dsun.java2d.noddraw=true -jar lobber.jar tv.sonis.lobber.LobberToolApplication
-
+TODO: double check if it's -jar or if I should use -cp and include jar in path to run the agr for what to run
+TODO: -jar runs what ever is inside the manefeist.md file...
