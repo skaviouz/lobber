@@ -29,6 +29,3 @@ How to run: (multiple choice)
  * in windows7 run 'cmd' (control prompt)
  - - type 'cd c:/aProject/lobber/dist/run.bat' given if you extract zip to 'c:/aProject/lobber'
  - - type 'java -Dsun.java2d.noddraw=true -jar lobber.jar tv.sonis.lobber.LobberToolApplication
-
-TODO: double check if it's -jar or if I should use -cp and include jar in path to run the agr for what to run
-TODO: -jar runs what ever is inside the manefeist.md file...
