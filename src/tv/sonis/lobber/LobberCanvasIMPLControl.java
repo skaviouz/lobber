@@ -5,10 +5,10 @@
 package tv.sonis.lobber;
 
 /**
+ * This controls the LobberCanvasIMPL
+ * 
  * JPanel for the popup dialogue box
  * Popup is actually JFrame acting like a dialogue box
- * 
- * This controls the LobberCanvasIMPL
  * 
  * @author skaviouz
  */
