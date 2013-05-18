@@ -20,12 +20,13 @@ import javax.swing.*;
  *
  * @author skaviouz
  */
-public class LobberCanvasIMPL extends JComponent {
+public class LobberCanvasIMPL extends JPanel {
 
     public Image image = null;
 
     @Override
     protected void paintComponent(Graphics gOriginal) {
+        super.paintComponent(gOriginal);
         //CALL ALL THE VARIABLES...
         //TODO: move local variables from method to class level
         //TODO: give better names =D

@@ -4,18 +4,17 @@
  */
 package tv.sonis.lobber;
 
-import javax.swing.JComponent;
-
 /**
- *
+ * Example from
+ * http://stackoverflow.com/questions/2440197/custom-jcomponent-not-displaying-in-custom-jpanel
  * @author skaviouz
  */
-public class LobberPlainApplication extends javax.swing.JFrame {
+public class TestFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form LobberPlainApplication
+     * Creates new form TestFrame
      */
-    public LobberPlainApplication() {
+    public TestFrame() {
         initComponents();
     }
 
@@ -28,12 +27,9 @@ public class LobberPlainApplication extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        JComponent temp = new LobberCanvasIMPL();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel1 = new TestPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        temp.setVisible(true);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -68,20 +64,20 @@ public class LobberPlainApplication extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LobberPlainApplication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LobberPlainApplication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LobberPlainApplication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LobberPlainApplication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LobberPlainApplication().setVisible(true);
+                new TestFrame().setVisible(true);
             }
         });
     }
