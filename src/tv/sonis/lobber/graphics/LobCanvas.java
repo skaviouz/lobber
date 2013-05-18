@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package tv.sonis.lobber;
+package tv.sonis.lobber.graphics;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -13,7 +13,7 @@ import javax.swing.JComponent;
  *
  * @author skaviouz
  */
-public class TestComponent extends JComponent {
+public class LobCanvas extends JComponent {
 
     @Override
     public void paintComponent(Graphics g) {
