@@ -12,4 +12,6 @@ import javax.swing.JPanel;
  */
 public class LobberCanvasIMPL extends JPanel {
     
+    
+    
 }
