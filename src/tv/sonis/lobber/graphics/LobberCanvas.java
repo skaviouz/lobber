@@ -83,8 +83,8 @@ public class LobberCanvas extends Canvas {
     }
 
     @Override
-    public void paint(Graphics g) {
-        Graphics2D g22 = (Graphics2D) g;
+    public void paint(Graphics gOriginal) {
+        Graphics2D g22 = (Graphics2D) gOriginal;
         BufferedImage bfi = new BufferedImage(LTA.getWidth(), LTA.getHeight(), BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = bfi.createGraphics();
         g2.setBackground(new Color(0, 0, 0, 0));
