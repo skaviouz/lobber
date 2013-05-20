@@ -10,7 +10,9 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.geom.Rectangle2D;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -55,13 +57,16 @@ public class LobberApplication extends JFrame {
         setSize(800, 600);
         setTitle("what's up");
 
-        final List<Image> icons = new ArrayList<Image>();
+        final List<Image> icons;
+        icons = new ArrayList<Image>();
         try {
             URL url16 = new URL("http://i.stack.imgur.com/m0KKu.png");
             URL url32 = new URL("http://i.stack.imgur.com/LVVMb.png");
 
-            icons.add(ImageIO.read(new File("favicon.ico")));
-            icons.add(ImageIO.read(new File("favicon.ico")));
+            //icons.add(ImageIO.read(new File("favicon.ico")));
+            BufferedImage bfi = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
+            Graphics2D g2dbfi;
+            setIconImage(new BufferedImage(16, 16, 3));
             //icons.add(ImageIO.read(url32));
         } catch (IOException ex) {
             Logger.getLogger(LobberApplication.class.getName()).log(Level.SEVERE, null, ex);
