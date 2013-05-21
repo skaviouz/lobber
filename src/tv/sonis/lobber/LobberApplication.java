@@ -7,6 +7,7 @@ package tv.sonis.lobber;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -56,26 +57,8 @@ public class LobberApplication extends JFrame {
         add(mainPane, java.awt.BorderLayout.CENTER);
         setSize(800, 600);
         setTitle("what's up");
-
-        final List<Image> icons;
-        icons = new ArrayList<Image>();
-        try {
-            URL url16 = new URL("http://i.stack.imgur.com/m0KKu.png");
-            URL url32 = new URL("http://i.stack.imgur.com/LVVMb.png");
-
-            //icons.add(ImageIO.read(new File("favicon.ico")));
-            BufferedImage bfi = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
-            Graphics2D g2dbfi;
-            setIconImage(new BufferedImage(16, 16, 3));
-            //icons.add(ImageIO.read(url32));
-        } catch (IOException ex) {
-            Logger.getLogger(LobberApplication.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        setIconImages(icons);
+        setIconImage(new ImageIcon("./icon32.png").getImage());
         setLocationByPlatform(true);
-        //setIconImage(new ImageIcon("C:/aProject/lobber/favicon.ico").getImage());
-
-        //pack();
     }
 
     public class MainPane extends JPanel {
