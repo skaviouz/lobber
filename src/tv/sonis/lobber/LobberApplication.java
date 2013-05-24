@@ -28,7 +28,8 @@ import tv.sonis.lobber.graphics.LobCanvas;
 import tv.sonis.lobber.util.lobberstatics;
 
 /**
- *
+ * Default application JFrame
+ * Example how to use Canvas
  * @author skaviouz
  */
 public class LobberApplication extends JFrame {
