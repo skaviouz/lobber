@@ -11,6 +11,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.geom.Rectangle2D;
@@ -25,6 +27,7 @@ import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
+import tv.sonis.lobber.util.Constants;
 import tv.sonis.lobber.util.lobberstatics;
 
 /**
@@ -57,8 +60,9 @@ public class LobberApplication extends JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         add(mainPane, java.awt.BorderLayout.CENTER);
         setSize(800, 600);
-        setTitle(tv.sonis.lobber.util.Constants.getTitle());
-        setIconImage(new ImageIcon("./resources/images/icon32_S.png").getImage());
+        setTitle(Constants.getTitle());
+        ImageIcon II = new ImageIcon("./resources/images/icon32_S.png");
+        setIconImage(II.getImage());
         setLocationByPlatform(true);
     }
 
@@ -79,16 +83,12 @@ public class LobberApplication extends JFrame {
          */
         @SuppressWarnings("unchecked")
         private void initComponents() {
+
+            JPanel pane = new JPanel(new GridBagLayout());
+            GridBagConstraints c = new GridBagConstraints();
+
             //this will fail if mainpane isn't through lobapp
-            add(new JPanel() {
-                @Override
-                public void paintComponent(Graphics g) {
-                    setSize(300, 300);
-
-                    g2d.dispose();
-
-                }
-            }, java.awt.BorderLayout.WEST);
+            add(pane);
         }
 
         @Override
