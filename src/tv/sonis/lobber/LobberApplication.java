@@ -57,7 +57,7 @@ public class LobberApplication extends JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         add(mainPane, java.awt.BorderLayout.CENTER);
         setSize(800, 600);
-        setTitle("what's up");
+        setTitle(tv.sonis.lobber.util.Constants.getTitle());
         setIconImage(new ImageIcon("./resources/images/icon32_S.png").getImage());
         setLocationByPlatform(true);
     }
