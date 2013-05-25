@@ -1,2 +1,2 @@
-java -Dsun.java2d.noddraw=true -jar lobber.jar tv.sonis.lobber.LobberToolApplication
+java -cp lobber.jar;. -Dsun.java2d.noddraw=true tv.sonis.lobber.LobberApplication
 pause
