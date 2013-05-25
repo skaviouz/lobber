@@ -58,7 +58,7 @@ public class LobberApplication extends JFrame {
         add(mainPane, java.awt.BorderLayout.CENTER);
         setSize(800, 600);
         setTitle("what's up");
-        setIconImage(new ImageIcon("./icon32.png").getImage());
+        setIconImage(new ImageIcon("./icon32_S.png").getImage());
         setLocationByPlatform(true);
     }
 
