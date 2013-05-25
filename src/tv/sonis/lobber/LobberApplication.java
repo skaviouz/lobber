@@ -25,7 +25,6 @@ import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
-import tv.sonis.lobber.graphics.LobCanvas;
 import tv.sonis.lobber.util.lobberstatics;
 
 /**
