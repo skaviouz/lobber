@@ -4,6 +4,7 @@
  */
 package tv.sonis.lobber;
 
+import java.awt.Button;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Color;
@@ -28,8 +29,8 @@ import tv.sonis.lobber.graphics.LobCanvas;
 import tv.sonis.lobber.util.lobberstatics;
 
 /**
- * Default application JFrame
- * Example how to use Canvas
+ * Default application JFrame Example how to use Canvas
+ *
  * @author skaviouz
  */
 public class LobberApplication extends JFrame {
@@ -79,11 +80,16 @@ public class LobberApplication extends JFrame {
          */
         @SuppressWarnings("unchecked")
         private void initComponents() {
-
-            LobCanvas t = new LobCanvas();
-            t.setVisible(true);
             //this will fail if mainpane isn't through lobapp
-            add(t, java.awt.BorderLayout.CENTER);
+            add(new JPanel() {
+                @Override
+                public void paintComponent(Graphics g) {
+                    setSize(300, 300);
+
+                    g2d.dispose();
+
+                }
+            }, java.awt.BorderLayout.WEST);
         }
 
         @Override
@@ -91,10 +97,31 @@ public class LobberApplication extends JFrame {
             super.paintComponent(g);
             g2d = (Graphics2D) g;
 
-            g2d.setColor(new Color(0, 0, 0, 90));
-            g2d.drawString("\u00a9" + " Skaviouz 2009", getWidth() - 95, getHeight() - 10);
-            if (!state.equals("")) {
-                g2d.drawString("STATE: " + state, 5, 25);
+            int y = getHeight();
+            int x = getWidth();
+
+            Graphics2D g2d = (Graphics2D) g.create();
+            LobberGraphics:
+            {
+            }
+            testString:
+            {
+                g2d.setColor(Color.red);
+                g2d.drawString("Hello", 50, 50);
+            }
+            box:
+            {
+                g2d.setColor(Color.red);
+                Rectangle2D r2d = new Rectangle2D.Double(15, 5, x - 25, y - 25);
+                g2d.draw(r2d);
+            }
+            copyrigbht:
+            {
+                g2d.setColor(new Color(0, 0, 0, 90));
+                g2d.drawString("\u00a9" + " Skaviouz 2009", getWidth() - 95, getHeight() - 10);
+                if (!state.equals("")) {
+                    g2d.drawString("STATE: " + state, 5, 25);
+                }
             }
 
             g2d.dispose();
