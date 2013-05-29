@@ -10,6 +10,7 @@ import java.awt.Graphics;
 import javax.swing.*;
 
 /**
+ * new LobberApp() runs LFrame in swing thread
  *
  * @author skaviouz
  */
@@ -30,16 +31,9 @@ public class LobberApp {
     public LobberApp() {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                createAndShowGUI();
+                gui = new LFrame("Swing Paint Demo");
             }
         });
-    }
-
-    /*
-     * MainGUI
-     */
-    public void createAndShowGUI() {
-        gui = new LFrame("Swing Paint Demo");
     }
 
     class MyLobberPane extends JPanel {
