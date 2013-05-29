@@ -5,20 +5,9 @@
 package tv.sonis.lobber;
 
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
-import java.awt.event.MouseMotionAdapter;
-import java.awt.image.BufferedImage;
 import javax.swing.*;
-import tv.sonis.lobber.util.Constants;
-import static tv.sonis.lobber.util.Constants.random;
-import static tv.sonis.lobber.util.Constants.d2f;
-import static tv.sonis.lobber.util.Constants.d2i;
-import static tv.sonis.lobber.util.Constants.f2i;
 
 /**
  *
