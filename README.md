@@ -27,5 +27,9 @@ To run the application via pre-build example :
 How to run: (multiple choice)
  * open the zip and find ./lobber/dist/run.bat
  * in windows7 run 'cmd' (control prompt)
- --- type 'cd c:/aProject/lobber/dist/run.bat' given if you extract zip to 'c:/aProject/lobber'
- --- type 'java -Dsun.java2d.noddraw=true -jar lobber.jar tv.sonis.lobber.LobberToolApplication
+ - type 'cd c:/aProject/lobber/dist/run.bat' given if you extract zip to 'c:/aProject/lobber'
+ - type 'java -Dsun.java2d.noddraw=true -jar lobber.jar tv.sonis.lobber.LobberToolApplication
+
+Netbeans:
+ - Working Dir : C:\aProject\lobber\bin
+ - VM Options : -Dsun.java2d.noddraw=true
