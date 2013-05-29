@@ -62,6 +62,10 @@ public class LobberApp {
 
         public JLayeredPane jlp;
 
+        public void GUI_Resize(ComponentEvent evt) {
+            Component c = (Component) evt.getSource();
+        }
+
         public GUI(String str) {
             super(str);
             settings:
@@ -70,8 +74,7 @@ public class LobberApp {
                 setSize(800, 600);
                 addComponentListener(new ComponentListener() {
                     public void componentResized(ComponentEvent evt) {
-                        Component c = (Component) evt.getSource();
-                        //........
+                        GUI_Resize(evt);
                     }
 
                     @Override
