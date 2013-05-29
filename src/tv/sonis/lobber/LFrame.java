@@ -16,11 +16,13 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
+import javax.swing.JPanel;
 import tv.sonis.lobber.util.Constants;
 import static tv.sonis.lobber.util.Constants.d2i;
 import static tv.sonis.lobber.util.Constants.random;
 
 /**
+ * LobberJFrame
  *
  * @author skaviouz
  */
@@ -31,23 +33,19 @@ public class LFrame extends JFrame implements ComponentListener {
 
     public LFrame(String str) {
         super(str);
-        setSize(800, 600);
         settings:
         {
+            setSize(800, 600);
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        }
-        setTitleBarInfo:
-        {
+            //Titlebar
             setTitle(Constants.getTitle());
             ImageIcon II = new ImageIcon("./resources/images/icon32_S.png");
             setIconImage(II.getImage());
-            jlp = new LCanvas();
         }
-        ImagePage:
+        Content:
         {
-            bfi = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
-            Graphics2D g2 = bfi.createGraphics();
-            g2.setBackground(new Color(0, 0, 0, 0));
+            jlp = new LCanvas();
+            setContentPane(jlp);
         }
         setScreenLocationInfo:
         {
@@ -56,7 +54,19 @@ public class LFrame extends JFrame implements ComponentListener {
         }
     }
 
+    /*
+     * deletes old one.
+     * a little bit of boilerplate =D
+     */
     public void GUI_Resize(ComponentEvent evt) {
+        setContentPane(new JPanel());
+        jlp.setEnabled(false);
+        jlp = null;
+        jlp = new LCanvas();
+        setContentPane(jlp);
+    }
+
+    public void old_GUI_Resize(ComponentEvent evt) {
         validate();
         Component c = (Component) evt.getSource();
         final int x = getWidth(), y = getHeight();
@@ -108,8 +118,13 @@ public class LFrame extends JFrame implements ComponentListener {
         }
     }
 
+    /*
+     * called when the window is resized
+     * redirects to : 
+     */
     @Override
     public void componentResized(ComponentEvent e) {
+        GUI_Resize(e);
     }
 
     @Override

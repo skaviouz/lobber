@@ -35,24 +35,4 @@ public class LobberApp {
             }
         });
     }
-
-    class MyLobberPane extends JPanel {
-
-        public MyLobberPane() {
-            setBorder(BorderFactory.createLineBorder(Color.black));
-            add(new JButton("TEST TEST TEST"));
-        }
-
-        public Dimension getPreferredSize() {
-            return new Dimension(250, 200);
-        }
-
-        public void paintComponent(Graphics g) {
-            super.paintComponent(g);
-            g.drawString("aaaaaaaaaaaaaaaaal!", 30, 100);
-
-            // Draw Text
-            g.drawString("This is my custom Panel!", 10, 20);
-        }
-    }
 }
