@@ -41,7 +41,7 @@ public class LFrame extends JFrame implements ComponentListener {
             setTitle(Constants.getTitle());
             ImageIcon II = new ImageIcon("./resources/images/icon32_S.png");
             setIconImage(II.getImage());
-            jlp = new JLayeredPane();
+            jlp = new LCanvas();
         }
         ImagePage:
         {
