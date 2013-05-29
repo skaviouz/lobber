@@ -5,9 +5,12 @@
 package tv.sonis.lobber;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.awt.event.MouseMotionAdapter;
 import javax.swing.*;
 import tv.sonis.lobber.util.Constants;
@@ -65,6 +68,24 @@ public class LobberApp {
             {
                 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 setSize(800, 600);
+                addComponentListener(new ComponentListener() {
+                    public void componentResized(ComponentEvent evt) {
+                        Component c = (Component) evt.getSource();
+                        //........
+                    }
+
+                    @Override
+                    public void componentMoved(ComponentEvent e) {
+                    }
+
+                    @Override
+                    public void componentShown(ComponentEvent e) {
+                    }
+
+                    @Override
+                    public void componentHidden(ComponentEvent e) {
+                    }
+                });
             }
             final int x = getWidth(), y = getHeight();
             setTitleBarInfo:
@@ -96,7 +117,7 @@ public class LobberApp {
                                 //setBounds(33 + (i2 * 10), 33 + (i2 * 10), 140, 140);
                                 setBounds(d2i(random(2, x - 144)), 22 + d2i(random(2, y - 144)), 140, 140);
                             }
-                        }, i2 + 5);
+                        }, i2 + 10);
                     }
                 }
             }
