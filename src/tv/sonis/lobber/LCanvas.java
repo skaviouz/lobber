@@ -36,13 +36,12 @@ public class LCanvas extends JLayeredPane {
 
     public LCanvas() {
         super();
-        setBorder(BorderFactory.createTitledBorder(
-                "Secret Border"));
+//        setBorder(BorderFactory.createTitledBorder("Secreta Border"));
 //        addMouseMotionListener(new MouseMotionAdapter() {
 //        });
         //setOpaque(true);
-        setBackground(new Color(122, 122, 122, 122));
-        //render();
+        setBackground(new Color(111, 122, 122, 122));
+        render();
     }
 
     /*
@@ -105,7 +104,6 @@ public class LCanvas extends JLayeredPane {
             g.drawString("This is my custom Panel!", 10, 20);
         }
     }
-
 //    public void old_GUI_Resize(ComponentEvent evt) {
 //        validate();
 //        Component c = (Component) evt.getSource();
