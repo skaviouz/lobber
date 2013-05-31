@@ -28,8 +28,7 @@ import static tv.sonis.lobber.util.Constants.random;
  */
 public class LFrame extends JFrame implements ComponentListener {
 
-    public JLayeredPane jlp;
-    public BufferedImage bfi;
+    public LCanvas jlp;
 
     public LFrame(String str) {
         super(str);
@@ -39,13 +38,12 @@ public class LFrame extends JFrame implements ComponentListener {
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             //Titlebar
             setTitle(Constants.getTitle());
-            ImageIcon II = new ImageIcon("./resources/images/icon32_S.png");
-            setIconImage(II.getImage());
+            setIconImage(new ImageIcon("./resources/images/icon32_S.png").getImage());
         }
         Content:
         {
-            //jlp = new LCanvas();
-            //setContentPane(jlp);
+            jlp = new LCanvas();
+            setContentPane(jlp);
         }
         setScreenLocationInfo:
         {
@@ -55,24 +53,12 @@ public class LFrame extends JFrame implements ComponentListener {
     }
 
     /*
-     * deletes old one.
-     * a little bit of boilerplate =D
-     */
-    public void GUI_Resize(ComponentEvent evt) {
-        setContentPane(new JPanel());
-        jlp.setEnabled(false);
-        jlp = null;
-        jlp = new LCanvas();
-        setContentPane(jlp);
-    }
-
-    /*
      * called when the window is resized
      * redirects to : 
      */
     @Override
     public void componentResized(ComponentEvent e) {
-        GUI_Resize(e);
+        jlp.Resized();
     }
 
     @Override
