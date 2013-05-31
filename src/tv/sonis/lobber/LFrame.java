@@ -44,8 +44,8 @@ public class LFrame extends JFrame implements ComponentListener {
         }
         Content:
         {
-            jlp = new LCanvas();
-            setContentPane(jlp);
+            //jlp = new LCanvas();
+            //setContentPane(jlp);
         }
         setScreenLocationInfo:
         {
@@ -64,58 +64,6 @@ public class LFrame extends JFrame implements ComponentListener {
         jlp = null;
         jlp = new LCanvas();
         setContentPane(jlp);
-    }
-
-    public void old_GUI_Resize(ComponentEvent evt) {
-        validate();
-        Component c = (Component) evt.getSource();
-        final int x = getWidth(), y = getHeight();
-        insideComponents:
-        {
-            setContent:
-            {
-                for (int i = 0; i < 2; i++) {
-                    final int i2 = i;
-                    jlp.add(new JLabel() {
-                        {
-                            setVerticalAlignment(JLabel.TOP);
-                            setHorizontalAlignment(JLabel.CENTER);
-                            setOpaque(true);
-                            setBackground(new Color(d2i(random(254)), d2i(random(254)), d2i(random(254)), 255));
-                            setForeground(Color.black);
-                            setBorder(BorderFactory.createLineBorder(Color.black));
-                            //setBounds(33 + (i2 * 10), 33 + (i2 * 10), 140, 140);
-                            setBounds(d2i(random(2, x - 144)), 22 + d2i(random(2, y - 144)), 140, 140);
-                        }
-                    }, i2 + 10);
-                }
-            }
-        }
-        copyright:
-        {
-            //Layer1 obviously... =D
-            jlp.add(new JLabel() {
-                {
-                    setVerticalAlignment(JLabel.TOP);
-                    setHorizontalAlignment(JLabel.CENTER);
-                    setOpaque(true);
-                    setBackground(new Color(255, 255, 255, 0));
-                    setBounds(x - 99, y - 16, 98, 15);
-                }
-
-                @Override
-                protected void paintComponent(Graphics g) {
-                    super.paintComponent(g);
-                    Graphics2D g2d = (Graphics2D) g;
-                    g2d.setColor(new Color(0, 0, 0, 50));
-                    g2d.drawString("\u00a9" + " Skaviouz 2009", getWidth() - 95, getHeight() - 3);
-                }
-            }, 1);
-        }
-        screen:
-        {
-            setContentPane(jlp);
-        }
     }
 
     /*
