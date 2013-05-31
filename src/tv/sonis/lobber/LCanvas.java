@@ -27,7 +27,7 @@ import static tv.sonis.lobber.util.Constants.d2i;
 import static tv.sonis.lobber.util.Constants.random;
 
 /**
- * 
+ *
  * @author skaviouz
  */
 public class LCanvas extends JLayeredPane {
@@ -37,15 +37,34 @@ public class LCanvas extends JLayeredPane {
     public LCanvas() {
         super();
         setBorder(BorderFactory.createTitledBorder(
-                "Move the Mouse to Move Duke"));
-        addMouseMotionListener(new MouseMotionAdapter() {
-        });
-        setOpaque(true);
-        setBackground(new Color(10, 240, 240, 0));
+                "Secret Border"));
+//        addMouseMotionListener(new MouseMotionAdapter() {
+//        });
+        //setOpaque(true);
+        setBackground(new Color(122, 122, 122, 122));
+        //render();
     }
 
-    @Override
-    protected void paintComponent(Graphics g) {
+    /*
+     * renders all the images
+     * places them in the correct locations
+     */
+    public void render() {
+        add(new JButton("asdfasdf"), 1);
+        add(new JButton("asdfasdf"), 2);
+    }
+
+    /*
+     * called from the frame
+     */
+    void Resized() {
+    }
+
+    public void action() {
+    }
+
+    @Deprecated
+    protected void paintComponenta(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
         ImagePage:
@@ -87,55 +106,55 @@ public class LCanvas extends JLayeredPane {
         }
     }
 
-    public void old_GUI_Resize(ComponentEvent evt) {
-        validate();
-        Component c = (Component) evt.getSource();
-        final int x = getWidth(), y = getHeight();
-        insideComponents:
-        {
-            setContent:
-            {
-                for (int i = 0; i < 2; i++) {
-                    final int i2 = i;
-                    jlp.add(new JLabel() {
-                        {
-                            setVerticalAlignment(JLabel.TOP);
-                            setHorizontalAlignment(JLabel.CENTER);
-                            setOpaque(true);
-                            setBackground(new Color(d2i(random(254)), d2i(random(254)), d2i(random(254)), 255));
-                            setForeground(Color.black);
-                            setBorder(BorderFactory.createLineBorder(Color.black));
-                            //setBounds(33 + (i2 * 10), 33 + (i2 * 10), 140, 140);
-                            setBounds(d2i(random(2, x - 144)), 22 + d2i(random(2, y - 144)), 140, 140);
-                        }
-                    }, i2 + 10);
-                }
-            }
-        }
-        copyright:
-        {
-            //Layer1 obviously... =D
-            jlp.add(new JLabel() {
-                {
-                    setVerticalAlignment(JLabel.TOP);
-                    setHorizontalAlignment(JLabel.CENTER);
-                    setOpaque(true);
-                    setBackground(new Color(255, 255, 255, 0));
-                    setBounds(x - 99, y - 16, 98, 15);
-                }
-
-                @Override
-                protected void paintComponent(Graphics g) {
-                    super.paintComponent(g);
-                    Graphics2D g2d = (Graphics2D) g;
-                    g2d.setColor(new Color(0, 0, 0, 50));
-                    g2d.drawString("\u00a9" + " Skaviouz 2009", getWidth() - 95, getHeight() - 3);
-                }
-            }, 1);
-        }
-        screen:
-        {
-            setContentPane(jlp);
-        }
-    }
+//    public void old_GUI_Resize(ComponentEvent evt) {
+//        validate();
+//        Component c = (Component) evt.getSource();
+//        final int x = getWidth(), y = getHeight();
+//        insideComponents:
+//        {
+//            setContent:
+//            {
+//                for (int i = 0; i < 2; i++) {
+//                    final int i2 = i;
+//                    jlp.add(new JLabel() {
+//                        {
+//                            setVerticalAlignment(JLabel.TOP);
+//                            setHorizontalAlignment(JLabel.CENTER);
+//                            setOpaque(true);
+//                            setBackground(new Color(d2i(random(254)), d2i(random(254)), d2i(random(254)), 255));
+//                            setForeground(Color.black);
+//                            setBorder(BorderFactory.createLineBorder(Color.black));
+//                            //setBounds(33 + (i2 * 10), 33 + (i2 * 10), 140, 140);
+//                            setBounds(d2i(random(2, x - 144)), 22 + d2i(random(2, y - 144)), 140, 140);
+//                        }
+//                    }, i2 + 10);
+//                }
+//            }
+//        }
+//        copyright:
+//        {
+//            //Layer1 obviously... =D
+//            jlp.add(new JLabel() {
+//                {
+//                    setVerticalAlignment(JLabel.TOP);
+//                    setHorizontalAlignment(JLabel.CENTER);
+//                    setOpaque(true);
+//                    setBackground(new Color(255, 255, 255, 0));
+//                    setBounds(x - 99, y - 16, 98, 15);
+//                }
+//
+//                @Override
+//                protected void paintComponent(Graphics g) {
+//                    super.paintComponent(g);
+//                    Graphics2D g2d = (Graphics2D) g;
+//                    g2d.setColor(new Color(0, 0, 0, 50));
+//                    g2d.drawString("\u00a9" + " Skaviouz 2009", getWidth() - 95, getHeight() - 3);
+//                }
+//            }, 1);
+//        }
+//        screen:
+//        {
+//            setContentPane(jlp);
+//        }
+//    }
 }
