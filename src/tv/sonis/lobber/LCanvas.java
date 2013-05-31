@@ -33,13 +33,14 @@ import static tv.sonis.lobber.util.Constants.random;
 public class LCanvas extends JLayeredPane {
 
     public BufferedImage bfi;
+    public JLabel main, rcm, about;
 
     public LCanvas() {
         super();
-//        setBorder(BorderFactory.createTitledBorder("Secreta Border"));
-//        addMouseMotionListener(new MouseMotionAdapter() {
-//        });
-        //setOpaque(true);
+        setBorder(BorderFactory.createTitledBorder("Secreta Border002"));
+        addMouseMotionListener(new MouseMotionAdapter() {
+        });
+        setOpaque(true);
         setBackground(new Color(111, 122, 122, 122));
         render();
     }
@@ -49,14 +50,54 @@ public class LCanvas extends JLayeredPane {
      * places them in the correct locations
      */
     public void render() {
-        add(new JButton("asdfasdf"), 1);
-        add(new JButton("asdfasdf"), 2);
+        final int x = getWidth(), y = getHeight();
+        main = new JLabel() {
+            {
+                setVerticalAlignment(JLabel.TOP);
+                setHorizontalAlignment(JLabel.CENTER);
+                setOpaque(true);
+                setBackground(new Color(d2i(random(254)), d2i(random(254)), d2i(random(254)), 255));
+                setForeground(Color.black);
+                setBorder(BorderFactory.createLineBorder(Color.black));
+                //setBounds(33 + (i2 * 10), 33 + (i2 * 10), 140, 140);
+                setBounds(44, 44, 140, 140);
+            }
+        };
+        rcm = new JLabel() {
+            {
+                setVerticalAlignment(JLabel.TOP);
+                setHorizontalAlignment(JLabel.CENTER);
+                setOpaque(true);
+                setBackground(new Color(d2i(random(254)), d2i(random(254)), d2i(random(254)), 255));
+                setForeground(Color.black);
+                setBorder(BorderFactory.createLineBorder(Color.black));
+                //setBounds(33 + (i2 * 10), 33 + (i2 * 10), 140, 140);
+                setBounds(44, 44, 140, 140);
+            }
+        };
+        about = new JLabel() {
+            {
+                setVerticalAlignment(JLabel.TOP);
+                setHorizontalAlignment(JLabel.CENTER);
+                setOpaque(true);
+                setBackground(new Color(d2i(random(254)), d2i(random(254)), d2i(random(254)), 255));
+                setForeground(Color.black);
+                setBorder(BorderFactory.createLineBorder(Color.black));
+                //setBounds(33 + (i2 * 10), 33 + (i2 * 10), 140, 140);
+                setBounds(44, 44, 140, 140);
+            }
+        };
+        this.add(main, 5);
+        this.add(rcm, 4);
+        this.add(about, 2);
     }
 
     /*
      * called from the frame
      */
-    void Resized() {
+    void Resized(int width, int height) {
+        main.setBounds(0, 0, width, height);
+        about.setBounds(0, 0, width, height);
     }
 
     public void action() {
