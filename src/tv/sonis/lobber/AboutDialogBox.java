@@ -16,7 +16,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import tv.sonis.*;
 import tv.sonis.lobber.graphics.LobberCanvas;
-import tv.sonis.lobber.model.TransparentFrame;
 
 /**
  *
