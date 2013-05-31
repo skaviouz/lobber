@@ -26,7 +26,7 @@ import static tv.sonis.lobber.util.Constants.random;
  *
  * @author skaviouz
  */
-public class LFrame extends JFrame implements ComponentListener {
+public class LFrame extends JFrame {
 
     public LCanvas jlp;
 
@@ -50,26 +50,5 @@ public class LFrame extends JFrame implements ComponentListener {
             setLocationByPlatform(true);
             setVisible(true);
         }
-    }
-
-    /*
-     * called when the window is resized
-     * redirects to : 
-     */
-    @Override
-    public void componentResized(ComponentEvent e) {
-        jlp.Resized(getWidth(), getHeight());
-    }
-
-    @Override
-    public void componentMoved(ComponentEvent e) {
-    }
-
-    @Override
-    public void componentShown(ComponentEvent e) {
-    }
-
-    @Override
-    public void componentHidden(ComponentEvent e) {
     }
 }
