@@ -58,7 +58,7 @@ public class LFrame extends JFrame implements ComponentListener {
      */
     @Override
     public void componentResized(ComponentEvent e) {
-        jlp.Resized();
+        jlp.Resized(getWidth(), getHeight());
     }
 
     @Override
