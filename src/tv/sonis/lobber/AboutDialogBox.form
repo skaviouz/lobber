@@ -82,7 +82,7 @@
                                   <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="210" max="32767" attributes="0"/>
+                              <EmptySpace pref="316" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                   <Component id="About_Programmer" min="-2" max="-2" attributes="0"/>
@@ -130,7 +130,7 @@
                       <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="92" max="32767" attributes="0"/>
+                      <EmptySpace pref="167" max="32767" attributes="0"/>
                       <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
@@ -153,7 +153,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="About_VER">
               <Properties>
-                <Property name="text" type="java.lang.String" value="v5.0"/>
+                <Property name="text" type="java.lang.String" value="v6.0"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="About_Programmer_LAB">
@@ -310,7 +310,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTextPane2formMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new ColorJTextPane(){{&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\nv 5.0   -   Code:       Added improvements, mostly gui fixes, using github for revision control&quot;);&#xa;    append(Color.black, &quot;\nv 4.2.5-b67 Code:       Testing gui improvements, added helpers&quot;);&#xa;    append(Color.black, &quot;\nv 4.2   -   Code:       Noted out algebra, less boilerplate (85% less)&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: trigonometry uses 5 lines vs. algebra version used 40+&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: algebra left for historic data&quot;);&#xa;    append(Color.green, &quot;\n                TODO: will remove in couple git updates&quot;);&#xa;    append(Color.black, &quot;\nv 4.1   -   VERSION:    version update, adjustments&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: Version info was wrong, small gui adjustments&quot;);&#xa;    append(Color.black, &quot;\nv 4.0   -   Code:       less boilerplate, took out proprietary graphics library&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: Took out geosoft.no graphics library&quot;);&#xa;    append(Color.black, &quot;\nv 3.5   -   GUI:       bug fixes&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: broken keybindings, autosize adjustments removed for now&quot;);&#xa;    append(Color.black, &quot;\nv 3.0   -   GUI:        included adjustable settings&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: request for adjustable settings&quot;);&#xa;    append(Color.black, &quot;\nv 2.0   -   ADD:        included other features like wifi calculator&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: programmed other features I thought would be useful&quot;);&#xa;    append(Color.black, &quot;\nv 1.5   -   Code:       fixed algorithm bug&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: 135-225&#xb0; was reversed like 225-135&#xb0; (flipped)&quot;);&#xa;    append(Color.black, &quot;\nv 1.0   -   Code:       basic instructions written&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE:   algebra, geosoft.no/graphics/, swing&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;&#xa;}}"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new ColorJTextPane(){{&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\nv 6.0   -   Code:       rewrite overhaul&quot;);&#xa;    append(Color.black, &quot;\nv 5.0   -   Code:       Added improvements, mostly gui fixes, using github for revision control&quot;);&#xa;    append(Color.black, &quot;\nv 4.2.5-b67 Code:       Testing gui improvements, added helpers&quot;);&#xa;    append(Color.black, &quot;\nv 4.2   -   Code:       Noted out algebra, less boilerplate (85% less)&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: trigonometry uses 5 lines vs. algebra version used 40+&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: algebra left for historic data&quot;);&#xa;    append(Color.green, &quot;\n                TODO: will remove in couple git updates&quot;);&#xa;    append(Color.black, &quot;\nv 4.1   -   VERSION:    version update, adjustments&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: Version info was wrong, small gui adjustments&quot;);&#xa;    append(Color.black, &quot;\nv 4.0   -   Code:       less boilerplate, took out proprietary graphics library&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: Took out geosoft.no graphics library&quot;);&#xa;    append(Color.black, &quot;\nv 3.5   -   GUI:       bug fixes&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: broken keybindings, autosize adjustments removed for now&quot;);&#xa;    append(Color.black, &quot;\nv 3.0   -   GUI:        included adjustable settings&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: request for adjustable settings&quot;);&#xa;    append(Color.black, &quot;\nv 2.0   -   ADD:        included other features like wifi calculator&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: programmed other features I thought would be useful&quot;);&#xa;    append(Color.black, &quot;\nv 1.5   -   Code:       fixed algorithm bug&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE: 135-225&#xb0; was reversed like 225-135&#xb0; (flipped)&quot;);&#xa;    append(Color.black, &quot;\nv 1.0   -   Code:       basic instructions written&quot;);&#xa;    append(Color.blue, &quot;\n                NOTE:   algebra, geosoft.no/graphics/, swing&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;    append(Color.black, &quot;\n&quot;);&#xa;&#xa;}}"/>
                   </AuxValues>
                 </Component>
               </SubComponents>
@@ -408,7 +408,7 @@
                               <Component id="jButton1Add" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="63" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="195" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -546,7 +546,7 @@
                           <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="85" max="32767" attributes="0"/>
+                      <EmptySpace pref="234" max="32767" attributes="0"/>
                   </Group>
                   <Component id="jSlider7" alignment="0" max="32767" attributes="0"/>
               </Group>
@@ -577,7 +577,7 @@
                       <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSlider7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                      <EmptySpace pref="108" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

@@ -110,6 +110,9 @@ public class AboutDialogBox extends javax.swing.JDialog {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextPane2 = new ColorJTextPane(){{
             append(Color.black, "\n");
+            append(Color.black, "\n");
+            append(Color.black, "\n");
+            append(Color.black, "\nv 6.0   -   Code:       rewrite overhaul");
             append(Color.black, "\nv 5.0   -   Code:       Added improvements, mostly gui fixes, using github for revision control");
             append(Color.black, "\nv 4.2.5-b67 Code:       Testing gui improvements, added helpers");
             append(Color.black, "\nv 4.2   -   Code:       Noted out algebra, less boilerplate (85% less)");
@@ -196,7 +199,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
 
         About_VER_LAB.setText("Version");
 
-        About_VER.setText("v5.0");
+        About_VER.setText("v6.0");
 
         About_Programmer_LAB.setText("Programmer");
 
@@ -238,7 +241,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
                             .addComponent(About_Programmer_LAB)
                             .addComponent(jLabel6)
                             .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 316, Short.MAX_VALUE)
                         .addGroup(jPanelAboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel7)
                             .addComponent(About_Programmer)
@@ -276,7 +279,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
                 .addComponent(jLabel20)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel21)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -424,7 +427,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1Add)
                     .addComponent(jLabel27))
-                .addGap(0, 63, Short.MAX_VALUE))
+                .addGap(0, 195, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -565,7 +568,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
                     .addComponent(jLabel28)
                     .addComponent(jLabel29)
                     .addComponent(jLabel30))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(234, Short.MAX_VALUE))
             .addComponent(jSlider7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
@@ -594,7 +597,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
                 .addComponent(jLabel30)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSlider7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         jTabbedPaneMAIN.addTab("Ref", jPanel5);
