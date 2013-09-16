@@ -5,7 +5,7 @@
 package tv.sonis;
 
 /**
- *
+ * Any random test I wanted to try when I'm bored...
  * @author skaviouz
  */
 public class randomtest {
