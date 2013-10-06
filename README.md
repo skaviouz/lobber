@@ -33,3 +33,6 @@ How to run: (multiple choice)
 Netbeans:
  - Working Dir : C:\aProject\lobber\bin
  - VM Options : -Dsun.java2d.noddraw=true
+
+Notes:
+ - add libraries to cp not the directory of jars.
