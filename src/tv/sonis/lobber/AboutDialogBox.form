@@ -199,7 +199,7 @@
                     <Property name="columns" type="int" value="20"/>
                     <Property name="lineWrap" type="boolean" value="true"/>
                     <Property name="rows" type="int" value="5"/>
-                    <Property name="text" type="java.lang.String" value="This program takes azmuth inputs and outputs graphical representations of said azmuths."/>
+                    <Property name="text" type="java.lang.String" value="This program takes azimuth inputs and outputs graphical representations of said azimuths."/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -408,7 +408,7 @@
                               <Component id="jButton1Add" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="195" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="197" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -577,7 +577,7 @@
                       <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSlider7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="108" max="32767" attributes="0"/>
+                      <EmptySpace pref="115" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

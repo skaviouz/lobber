@@ -217,7 +217,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("This program takes azmuth inputs and outputs graphical representations of said azmuths.");
+        jTextArea1.setText("This program takes azimuth inputs and outputs graphical representations of said azimuths.");
         jScrollPane1.setViewportView(jTextArea1);
 
         jLabel10.setText("Honorably Mentioned");
@@ -427,7 +427,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1Add)
                     .addComponent(jLabel27))
-                .addGap(0, 195, Short.MAX_VALUE))
+                .addGap(0, 197, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -597,7 +597,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
                 .addComponent(jLabel30)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSlider7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         jTabbedPaneMAIN.addTab("Ref", jPanel5);
@@ -669,6 +669,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
 
     private void jSlider6StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider6StateChanged
             if(!jSlider6.getValueIsAdjusting()){
+//                Platform.
                WindowUtils.setWindowAlpha(LTA, jSlider6.getValue()/100f);
             }
     }//GEN-LAST:event_jSlider6StateChanged
