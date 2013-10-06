@@ -36,3 +36,7 @@ Netbeans:
 
 Notes:
  - add libraries to cp not the directory of jars.
+
+Special Thanks to webpages:
+ - Harsh Raval - http://www.javacodegeeks.com/2012/09/transparent-jframe-using-jna.html
+
