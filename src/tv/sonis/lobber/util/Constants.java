@@ -11,10 +11,17 @@ package tv.sonis.lobber.util;
 public class Constants {
 
     public static String getTitle() {
-        return "Lobber Tools " + Version.var;
+        return "Lobber Tools " + Version.var + " - \"Graph like a pro!\" (C) 2012";
+//        return "Lobber Tools " + Version.var + " - Graph like a pro";
     }
-    public static final Version Version = new Version("6");
-    
+    public static final Version Version = new Version("6.0");
+    public static final Person[] Honors = new Person[]{
+        new Person("Eric M. Horvitz II").setSpecial("Programmer").setThanks("For all the time and effort"), 
+        new Person("Tom Waller").setSpecial("From the insirpration of").setThanks("Asking for the program to be made"), 
+        new Person("James Bennet").setSpecial("Honorably Mentioned").setThanks("Thanks for testing and looking for bugs"), 
+        new Person("Stephen Gilmore").setSpecial("Honorably Mentioned").setThanks("Thanks for testing and looking for bugs")
+    };
+
     public static double random(double max){
         return random(0, max);
     }
