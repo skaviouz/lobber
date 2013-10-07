@@ -4,14 +4,14 @@
  */
 package tv.sonis.lobber.util;
 
-import tv.sonis.lobber.LobberApplication;
+import tv.sonis.lobber.*;
 
 /**
- *
+ * calls itself directly
  * @author skaviouz
  */
 public class lobberstatics {
     
-    public static LobberApplication lobapp = null;
+    public static LobberLauncherPanel lobapp = null;
     
 }
