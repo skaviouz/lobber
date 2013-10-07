@@ -12,6 +12,8 @@ import java.awt.image.*;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.imageio.*;
 import javax.swing.*;
 import tv.sonis.lobber.util.Constants;
@@ -33,16 +35,34 @@ public class LobberLauncher extends JFrame {
     public LobberLauncherPanel mainPane;
 
     public LobberLauncher() {
-    }
-
-    private void initComponents() {
-        mainPane = new LobberLauncherPanel();
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        add(mainPane);
-        setSize(800, 600);
-        setTitle(Constants.getTitle());
-        ImageIcon II = new ImageIcon("./resources/images/icon32_S.png");
-        setIconImage(II.getImage());
-        setLocationByPlatform(true);
+        initSelf:
+        {
+            setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+            setSize(800, 600);
+            setTitle(Constants.getTitle());
+            ImageIcon:
+            {
+                String file = "resources/images/icon32_L.png";
+                InputStream is;
+                ImageInJar:
+                try {
+                    is = Thread.currentThread().getContextClassLoader().getResourceAsStream(file);
+                    byte[] buffer = new byte[100000];
+                    is.read(buffer, 0, 100000);
+                    ImageIcon placeHolder = new ImageIcon(buffer);
+                    setIconImage(placeHolder.getImage());
+                } catch (IOException ex) {
+                    Logger.getLogger(LobberLauncher.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            setLocationByPlatform(true);
+        }
+        initComponents:
+        {
+            mainPane = new LobberLauncherPanel();
+            add(mainPane);
+            AboutDialogBox Aboutdialog = new AboutDialogBox(this, true);
+            Aboutdialog.setVisible(true);
+        }
     }
 }
