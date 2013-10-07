@@ -24,13 +24,14 @@ import tv.sonis.lobber.graphics.LobberCanvas;
 public class AboutDialogBox extends javax.swing.JDialog {
 
     public LobberToolApplication LTA = null;
+    public LobberLauncher LTA2 = null;
 
     /**
      * Creates new form AboutDialogueBox
      */
     public AboutDialogBox(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        LTA = (LobberToolApplication) parent;
+        LTA2 = (LobberLauncher) parent;
         initComponents();
         tabulateContent();
     }
@@ -195,21 +196,24 @@ public class AboutDialogBox extends javax.swing.JDialog {
         });
 
         About_Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        About_Title.setText("Lobber Tools - \"Graph like a pro!\"");
+        About_Title.setText("Lobber Tools - \"Graph like a pro!\" (C) 2012");
 
         About_VER_LAB.setText("Version");
 
-        About_VER.setText("v6.0");
+        About_VER.setText("v" + tv.sonis.lobber.util.Constants.Version.var);
 
         About_Programmer_LAB.setText("Programmer");
 
-        About_Programmer.setText("Eric M. Horvitz II");
+        About_Programmer.setText(tv.sonis.lobber.util.Constants.Honors[0].getName());
+        About_Programmer.setToolTipText(tv.sonis.lobber.util.Constants.Honors[0].getThanks());
 
         jLabel6.setText("From the insirpration of");
 
-        jLabel7.setText("Tom Waller");
+        jLabel7.setText(tv.sonis.lobber.util.Constants.Honors[1].getName());
+        jLabel7.setToolTipText(tv.sonis.lobber.util.Constants.Honors[1].getThanks());
 
-        jLabel8.setText("James Bennet");
+        jLabel8.setText(tv.sonis.lobber.util.Constants.Honors[2].getName());
+        jLabel8.setToolTipText(tv.sonis.lobber.util.Constants.Honors[2].getThanks());
 
         jLabel9.setText("Basis");
 
@@ -222,7 +226,8 @@ public class AboutDialogBox extends javax.swing.JDialog {
 
         jLabel10.setText("Honorably Mentioned");
 
-        jLabel20.setText("Stephen Gilmore");
+        jLabel20.setText(tv.sonis.lobber.util.Constants.Honors[3].getName());
+        jLabel20.setToolTipText(tv.sonis.lobber.util.Constants.Honors[3].getThanks());
 
         javax.swing.GroupLayout jPanelAboutLayout = new javax.swing.GroupLayout(jPanelAbout);
         jPanelAbout.setLayout(jPanelAboutLayout);
@@ -241,7 +246,7 @@ public class AboutDialogBox extends javax.swing.JDialog {
                             .addComponent(About_Programmer_LAB)
                             .addComponent(jLabel6)
                             .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 316, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 330, Short.MAX_VALUE)
                         .addGroup(jPanelAboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel7)
                             .addComponent(About_Programmer)
